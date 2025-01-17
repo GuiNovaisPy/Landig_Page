@@ -31,7 +31,7 @@ body{
 
 .cabecalho__menu__link {
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--terceary-color);
     text-decoration: none;
@@ -43,17 +43,18 @@ body{
     display: flex; /* flexbox  por padrao por row*/
     align-items: center; /* alinhando itens no centro do elemento pai*/
     justify-content: space-between; /* espançando os itens que estão dentro do elemento pai com base na direcao do flexbox*/ 
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width:  615px;
+    width:  50%;
     display: flex;/* flexbox  por padrao por row*/
     flex-direction: column; /* flexbox  por padrao por row, mudando para column*/
     gap: 40px; /* espaço vertical entre os elementos*/
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.25rem; /*utlizando medida relativa*/
     font-family: "Krona One", sans-serif;
 }
 
@@ -62,7 +63,7 @@ body{
 }
 
 .apresentacao__conteudo_texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -77,17 +78,17 @@ body{
 .apresentacao__links__subtitulo {
     font-family: "Krona One", sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
-.apresentacao__links__link  {
+.apresentacao__links__navegacao {
     display: flex; /* flexbox  por padrao por row*/
     justify-content: center; /* alinhando elementos no centro */
     gap: 16px;/* espaço horizontal entre os elementos*/
-    width: 378px; /* tamanho do eixo x do elemento */
+    width: 50%; /* tamanho do eixo x do elemento */
     text-align: center;  /* centralizando texto no pai */
     border-radius: 16px; /* arredondando as bordas do width */
-    font-size: 24px; /* fonte do texto*/
+    font-size: 1.5rem; /* fonte do texto*/
     font-weight: 600;
     padding: 21.5px 0; /* espaço  entre a borda e o conteudo (escrita nesse caso), primeiro valor vertical, segundo horizontal*/
     text-decoration: none; /* removendo sublinhado do a */
@@ -98,8 +99,12 @@ body{
     
 }
 
-.apresentacao__links__link:hover { /* efeito do botao quando o mouse passa por cima */
+.apresentacao__links__navegacao:hover { /* efeito do botao quando o mouse passa por cima */
     background-color: #272727;
+}
+
+.apresentacao__imagem {
+    width: 50%;
 }
 
 .rodape {
@@ -108,6 +113,25 @@ body{
     background-color: var(--terceary-color);
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
+}
+
+@media (max-width:1200px) { /*responsividade com base no dispositivo (pixels)*/
+
+    .cabecalho {
+        padding: 8%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse; /*coluna reversa para a foto ficar em cima */
+        padding: 5%;
+    }
+    .apresentacao__conteudo {
+        width: auto;/* para ocupar o espaço disponivel */
+    }
+    
+
 }

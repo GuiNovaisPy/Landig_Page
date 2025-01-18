@@ -131,7 +131,10 @@ body{
     }
     .apresentacao__conteudo {
         width: auto;/* para ocupar o espaço disponivel */
+        text-align: center;
+    }
+    .apresentacao__links__subtitulo {
+        text-align: center;
     }
     
-
 }
